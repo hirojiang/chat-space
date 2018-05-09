@@ -37,7 +37,7 @@ Things you may want to cover:
 ### Association
 - has_many :groups, through: :group_users
 - has_many :group_users
-- has_many :messages through: :group_users
+- has_many :messages
 
 ## groups table
 
@@ -47,10 +47,9 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many :messages through: :group_users
+- has_many :messages
 - has_many :users, through: :group_users
 - has_many :group_users
-- accepts_nested_attributes_for:group_users
 
 ## group_users table
 
@@ -69,7 +68,9 @@ Things you may want to cover:
 |------|----|-------|
 |body|text||
 |image|string||
-|group_user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
+|user_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :group_user
+- belongs_to :user
+- belongs_to :group
