@@ -35,8 +35,9 @@ Things you may want to cover:
 |password|string|null: false|
 
 ### Association
-- has_many :groups, through: :members
-- has_many :members
+- has_many :groups, through: :group_users
+- has_many :group_users
+- has_many :messages through: :group_users
 
 ## groups table
 
@@ -46,30 +47,29 @@ Things you may want to cover:
 |user_id|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many :users, through: :members
-- has_many :members
-- accepts_nested_attributes_for:members
+- has_many :messages through: :group_users
+- has_many :users, through: :group_users
+- has_many :group_users
+- accepts_nested_attributes_for:group_users
 
-## members table
+## group_users table
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false, foreign_key: true|
-|group_id|integer|null: false, foreign_key: true|
+|user|reference|null: false, foreign_key: true|
+|group|reference|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :group
 - belongs_to :user
 
-##  messages table
+## messages table
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
-|image|string|default: " "|
-|group_id|integer|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
+|body|text||
+|image|string||
+|group_user_id|integer|null: false, foreign_key: true|
 
 ### Association
--belongs_to :user
--belongs_to :group
+- belongs_to :group_user
