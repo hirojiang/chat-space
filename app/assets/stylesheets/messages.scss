@@ -23,18 +23,18 @@
         font-size: 16px;
         font-weight: bold;
         float: left;
-          }
+      }
       &__userAction {
         color: $white;
         float: right;
         .fa.fa-pencil-square-o {
           color: $white;
-          }
+        }
         .fa.fa-cog {
           color: $white;
-          }
         }
       }
+    }
     &__bottom {
       background-color: $chatSideBottomBack;
       height: calc(100vh - 100px);
@@ -48,18 +48,18 @@
             height: 100%;
             color: white;
             text-decoration: none;
-              }
+          }
           &__name {
               font-size: 15px;
               padding-bottom: 5px;
-              }
+          }
           &__message {
               font-size: 11px;
-              }
-            }
           }
         }
       }
+    }
+  }
   .chatMain {
     width: calc(100vw - 300px);
     background-color: $white;
@@ -80,7 +80,7 @@
         font-size: 12px;
         color: $gray;
         padding-top: 15px;
-        }
+      }
       }
       &__right {
         float: right;
@@ -95,11 +95,11 @@
             text-decoration: none;
             .edit__btn__link__text {
               color: $skyblue;
-              }
             }
           }
         }
       }
+    }
     &__middle {
       height: calc(100vh - 100px - 90px);
       background-color: $chatMainMiddleBack;
@@ -168,4 +168,3 @@
     }
   }
 }
-
