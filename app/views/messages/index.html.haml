@@ -1,8 +1,12 @@
-.chatContents
-  .chatSide
-    = render "shared/chatSide__top"
-    = render "shared/chatSide__bottom"
-  .chatMain
-    = render "shared/chatMain__top"
-    = render "shared/chatMain__middle"
-    = render "shared/chatMain__bottom"
+.wrapper
+  .chatContents
+    .chatSide
+      = render "shared/chatSide__top"
+      = render "shared/chatSide__bottom"
+    .chatMain
+      = render "shared/chatMain__top"
+      .chatMain__middle
+        .messages
+          = render @messages
+          / =render partial: 'message', collection: @messages
+      = render "shared/chatMain__bottom"
