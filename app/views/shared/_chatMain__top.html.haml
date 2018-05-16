@@ -1,0 +1,10 @@
+.chatMain__top
+  .chatMain__top__left
+    %p.chatMain__top__left__groupName
+      テストグループ
+    %p.chatMain__top__left__memberName
+      Member : Jan
+
+  .chatMain__top__right
+    .edit__btn
+      = link_to "Edit", edit_group_path(current_user), method: :get, class: "edit__btn__link"
