@@ -107,21 +107,21 @@
       padding: 0 40px 0 40px;
       box-sizing: border-box;
 
-      &__messages {
+      .messages {
         padding-top: 46px;
 
-        &__message {
+        .message {
           padding-bottom: 40px;
 
           &__top {
             padding-bottom: 10px;
 
-            &__userName {
+            .message__userName {
               font-size: 16px;
               color: #434A54;
               font-weight: bold;
             }
-            &__postedDate {
+            .message__date {
               font-size: 12px;
               color: $gray;
             }
