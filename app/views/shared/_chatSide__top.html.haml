@@ -1,0 +1,9 @@
+.chatSide__top
+  .chatSide__top__userName
+    %h5
+      = current_user.name
+  .chatSide__top__userAction
+    = link_to new_group_path do
+      %span.fa.fa-pencil-square-o
+    = link_to edit_user_path(current_user) do
+      %span.fa.fa-cog

@@ -1,15 +1,8 @@
-.notification
-  チャットグループが作成されました。
 .chatContents
   .chatSide
-    .chatSide__top
-      = render "chatSide__top"
-    .chatSide__bottom
-      = render "chatSide__bottom"
+    = render "shared/chatSide__top"
+    = render "shared/chatSide__bottom"
   .chatMain
-    .chatMain__top
-      = render "chatMain__top"
-    .chatMain__middle
-      = render "chatMain__middle"
-    .chatMain__bottom
-      = render "chatMain__bottom"
+    = render "shared/chatMain__top"
+    = render "shared/chatMain__middle"
+    = render "shared/chatMain__bottom"
