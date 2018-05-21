@@ -35,25 +35,23 @@
       background-color: $chatSideBottomBack;
       height: calc(100vh - 100px);
 
-      &__groups {
+      .groups {
         padding: 20px 20px 0 20px;
 
-        &__group {
+        a {
+          text-decoration: none;
+        }
+        .group {
           padding-bottom: 40px;
-          // &__link{
-          //   text-decoration: none;
-          //   color: white;
-          // }
+          text-decoration: none;
+          color: white;
+
           &__name {
             font-size: 15px;
             padding-bottom: 5px;
-            text-decoration: none;
-            color: white;
           }
           &__message {
             font-size: 11px;
-            color: white;
-            text-decoration: none;
           }
         }
       }
@@ -72,18 +70,21 @@
 
       &__left {
         float: left;
-        &__groupName {
+        .chatMain__groupName {
           font-size: 20px;
           color: #333333;
           padding-top: 35px;
         }
-        &__memberName {
+        .chatMain__memberList {
           font-size: 12px;
           color: $gray;
           padding-top: 15px;
         }
+        .chatMain__memberList p {
+          float: left;
+        }
       }
-      &__right {
+      .edit {
         float: right;
         padding-top: 28px;
 
@@ -130,6 +131,10 @@
             font-size: 14px;
             color: #434A54;
           }
+          img {
+            object-fit: contain;
+            width: 200px;
+          }
         }
       }
     }
@@ -139,7 +144,7 @@
       padding: 20px 50px 20px 40px;
       box-sizing: border-box;
 
-      &__messageForm__textArea {
+      .messageArea {
         height:50px;
         width: calc(100% - 140px);
         border: none;
@@ -156,11 +161,14 @@
         padding-right: 10px;
         position: absolute;
         right: 170px;
-        float: right;
+        // float: right;
 
         &__btn {
           line-height: 50px;
           font-size: 20px;
+        }
+        .hidden {
+          display: none;
         }
       }
       .submit__btn {

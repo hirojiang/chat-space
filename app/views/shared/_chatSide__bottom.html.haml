@@ -1,9 +1,9 @@
 .chatSide__bottom
-  .chatSide__bottom__groups
-    .chatSide__bottom__groups__group
-      - current_user.groups.each do |group|
-        = link_to group_messages_path(group) do
-          .chatSide__bottom__groups__group__name
+  .groups
+    - current_user.groups.each do |group|
+      = link_to group_messages_path(group) do
+        .group
+          .group__name
             = group.name
-          .chatSide__bottom__groups__group__message
+          .group__message
             = group.show_last_message

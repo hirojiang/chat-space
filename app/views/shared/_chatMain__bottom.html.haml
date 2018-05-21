@@ -1,6 +1,6 @@
 .chatMain__bottom
   = form_for [@group, @message] do |f|
-    = f.text_field :content, class: 'chatMain__bottom__messageForm__textArea', placeholder: 'type a message'
+    = f.text_field :content, class: 'messageArea', placeholder: 'type a message'
     .selectImage
       = f.label :image, class: 'selectImage__btn' do
         = fa_icon 'picture-o', class: 'fa.fa-picture-o'

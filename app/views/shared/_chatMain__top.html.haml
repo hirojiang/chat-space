@@ -1,10 +1,11 @@
 .chatMain__top
   .chatMain__top__left
-    .chatMain__top__left__groupName
-      仮置き
-    .chatMain__top__left__memberName
-      仮置き
-
-  .chatMain__top__right
+    .chatMain__groupName
+      = @group.name
+    .chatMain__memberList
+      %p Member：
+      - @group.users.each do |user|
+        = user.name
+  .edit
     .edit__btn
       = link_to "Edit", edit_group_path(current_user), method: :get, class: "edit__btn__link"
