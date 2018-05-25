@@ -78,22 +78,22 @@ $(function() {
     });
 
     function update(){
+      var message_id = $('.message:last').data('id');
       if (location.pathname.match(/\/groups\/\d+\/messages/)){
-        var message_id = $('.message:last').data('id');
+        $.ajax({
+          url: location.href,
+          type: 'GET',
+          data: {id: message_id},
+          dataType: 'json'
+        })
+        .always(function(data){
+          console.log(data);
+          data.forEach(function(data){
+            buildMESSAGE(data);
+          });
+          $('.chatMain__middle').animate({scrollTop: $('.messages')[0].scrollHeight});
+        })
       }
-      $.ajax({
-        url: location.href,
-        type: 'GET',
-        data: {id: message_id},
-        dataType: 'json'
-      })
-      .always(function(data){
-        console.log(data);
-        data.forEach(function(data){
-          buildMESSAGE(data);
-        });
-        $('.chatMain__middle').animate({scrollTop: $('.messages')[0].scrollHeight});
-      })
     }
   });
 });
