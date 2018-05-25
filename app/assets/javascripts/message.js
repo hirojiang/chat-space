@@ -87,7 +87,6 @@ $(function() {
           dataType: 'json'
         })
         .always(function(data){
-          console.log(data);
           data.forEach(function(data){
             buildMESSAGE(data);
           });
