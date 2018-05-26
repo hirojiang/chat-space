@@ -46,7 +46,7 @@ $(function() {
       alert('error');
     })
   })
-  //自動更新機能
+
   $(function(){
     function buildMESSAGE(new_message){
       var image = ""
@@ -72,9 +72,9 @@ $(function() {
                 </div>`
       message_list.append(html);
     }
-    //５秒間に1度更新
+
     $(function(){
-      setInterval(update, 5000000000000000000000000000);
+      setInterval(update, 5000);
     });
 
     function update(){
