@@ -74,7 +74,7 @@ $(function() {
     }
     //５秒間に1度更新
     $(function(){
-      setInterval(update, 5000);
+      setInterval(update, 5000000000000000000000000000);
     });
 
     function update(){
