@@ -22728,3 +22728,2634 @@ Processing by MessagesController#index as JSON
 Completed 200 OK in 64ms (Views: 26.2ms | ActiveRecord: 4.1ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:44:01 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (75.6ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:44:03 +0900
+  Rendered shared/_chatSide__top.html.haml (7.7ms)
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (26.1ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mGroup Load (17.2ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  [1m[36mMessage Load (19.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (21.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  [1m[36mMessage Load (32.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (1.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (382.4ms)
+  Rendered groups/index.html.haml within layouts/application (567.2ms)
+  Rendered messages/index.json.jbuilder (70.8ms)
+Completed 200 OK in 348ms (Views: 95.0ms | ActiveRecord: 160.1ms)
+
+
+  Rendered layouts/_notifications.html.haml (5.9ms)
+Completed 200 OK in 2440ms (Views: 1988.5ms | ActiveRecord: 222.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:44:05 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (80.2ms)
+  [1m[36mGroup Load (1.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (36.2ms)
+  Rendered groups/index.html.haml within layouts/application (230.7ms)
+  Rendered layouts/_notifications.html.haml (4.0ms)
+Completed 200 OK in 537ms (Views: 478.7ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:44:08 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (1.3ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (3.6ms)
+Completed 200 OK in 42ms (Views: 30.2ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:44:09 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (5.8ms)
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (29.2ms)
+  Rendered groups/index.html.haml within layouts/application (101.3ms)
+  Rendered layouts/_notifications.html.haml (14.4ms)
+Completed 200 OK in 286ms (Views: 249.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:44:12 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (1.9ms)
+Completed 200 OK in 29ms (Views: 20.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:44:14 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (3.6ms)
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (15.4ms)
+  Rendered groups/index.html.haml within layouts/application (91.1ms)
+  Rendered layouts/_notifications.html.haml (2.7ms)
+Completed 200 OK in 241ms (Views: 204.9ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:44:17 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (7.2ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (10.1ms)
+Completed 200 OK in 165ms (Views: 146.8ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:44:19 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (7.9ms)
+  [1m[36mGroup Load (5.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (41.8ms)
+  Rendered groups/index.html.haml within layouts/application (148.8ms)
+  Rendered layouts/_notifications.html.haml (2.9ms)
+Completed 200 OK in 329ms (Views: 290.1ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:44:22 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (2.2ms)
+Completed 200 OK in 30ms (Views: 20.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:44:24 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (14.5ms)
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (1.2ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (32.1ms)
+  Rendered groups/index.html.haml within layouts/application (110.8ms)
+  Rendered layouts/_notifications.html.haml (13.7ms)
+Completed 200 OK in 288ms (Views: 236.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:44:27 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (4.3ms)
+Completed 200 OK in 70ms (Views: 56.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:44:29 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (5.6ms)
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (1.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (18.2ms)
+  Rendered groups/index.html.haml within layouts/application (104.7ms)
+  Rendered layouts/_notifications.html.haml (3.1ms)
+Completed 200 OK in 286ms (Views: 244.1ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:44:32 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (3.1ms)
+Completed 200 OK in 33ms (Views: 22.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:44:34 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (14.7ms)
+  [1m[36mGroup Load (5.2ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (1.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (2.8ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (50.1ms)
+  Rendered groups/index.html.haml within layouts/application (158.3ms)
+  Rendered layouts/_notifications.html.haml (7.0ms)
+Completed 200 OK in 424ms (Views: 367.8ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:44:37 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (8.8ms)
+Completed 200 OK in 108ms (Views: 92.5ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:44:39 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (9.1ms)
+  [1m[36mGroup Load (1.2ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (12.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (33.9ms)
+  Rendered groups/index.html.haml within layouts/application (115.8ms)
+  Rendered layouts/_notifications.html.haml (3.7ms)
+Completed 200 OK in 298ms (Views: 243.8ms | ActiveRecord: 17.0ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:44:42 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (2.8ms)
+Completed 200 OK in 51ms (Views: 35.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:44:44 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (13.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (71.0ms)
+  [1m[36mGroup Load (1.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (2.1ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (47.9ms)
+  Rendered groups/index.html.haml within layouts/application (338.4ms)
+  Rendered layouts/_notifications.html.haml (4.0ms)
+Completed 200 OK in 873ms (Views: 720.7ms | ActiveRecord: 19.3ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:44:47 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (4.6ms)
+Completed 200 OK in 55ms (Views: 35.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:44:49 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (95.0ms)
+  [1m[36mGroup Load (2.8ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (2.1ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (1.9ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (32.7ms)
+  Rendered groups/index.html.haml within layouts/application (386.2ms)
+  Rendered layouts/_notifications.html.haml (3.8ms)
+Completed 200 OK in 650ms (Views: 576.9ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:44:52 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.9ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (1.8ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (5.8ms)
+Completed 200 OK in 55ms (Views: 40.7ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:44:54 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (6.9ms)
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (24.9ms)
+  Rendered groups/index.html.haml within layouts/application (87.3ms)
+  Rendered layouts/_notifications.html.haml (2.9ms)
+Completed 200 OK in 276ms (Views: 247.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:44:57 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (2.0ms)
+Completed 200 OK in 30ms (Views: 20.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:44:59 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (7.0ms)
+  [1m[36mGroup Load (1.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (2.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (22.3ms)
+  Rendered groups/index.html.haml within layouts/application (111.7ms)
+  Rendered layouts/_notifications.html.haml (2.6ms)
+Completed 200 OK in 310ms (Views: 278.2ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:45:02 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (2.7ms)
+Completed 200 OK in 35ms (Views: 24.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:45:04 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (7.2ms)
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (18.6ms)
+  Rendered groups/index.html.haml within layouts/application (81.1ms)
+  Rendered layouts/_notifications.html.haml (3.0ms)
+Completed 200 OK in 217ms (Views: 189.4ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:45:07 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (3.6ms)
+Completed 200 OK in 62ms (Views: 40.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:45:09 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (10.3ms)
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (27.0ms)
+  Rendered groups/index.html.haml within layouts/application (112.1ms)
+  Rendered layouts/_notifications.html.haml (2.6ms)
+Completed 200 OK in 326ms (Views: 255.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:45:12 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (8.4ms)
+Completed 200 OK in 49ms (Views: 35.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:45:14 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (28.8ms)
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (71.6ms)
+  Rendered groups/index.html.haml within layouts/application (374.6ms)
+  Rendered layouts/_notifications.html.haml (2.8ms)
+Completed 200 OK in 565ms (Views: 514.0ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/groups/14/messages" for 127.0.0.1 at 2018-05-26 20:45:15 +0900
+Processing by MessagesController#index as HTML
+  Parameters: {"group_id"=>"14"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (7.1ms)
+  [1m[36mGroup Load (1.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (1.2ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (1.1ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (29.7ms)
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `group_users` ON `users`.`id` = `group_users`.`user_id` WHERE `group_users`.`group_id` = 14[0m
+  Rendered shared/_chatMain__top.html.haml (22.7ms)
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14[0m
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5[0m
+  Rendered collection of messages/_message.html.haml [5 times] (16.7ms)
+  Rendered shared/_chatMain__bottom.html.haml (47.2ms)
+  Rendered messages/index.html.haml within layouts/application (315.6ms)
+  Rendered layouts/_notifications.html.haml (3.0ms)
+Completed 200 OK in 409ms (Views: 381.3ms | ActiveRecord: 11.3ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:45:17 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (1.6ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (30.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (37.2ms)
+Completed 200 OK in 182ms (Views: 129.1ms | ActiveRecord: 33.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:45:19 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (5.8ms)
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (18.6ms)
+  Rendered groups/index.html.haml within layouts/application (93.4ms)
+  Rendered layouts/_notifications.html.haml (4.7ms)
+Completed 200 OK in 307ms (Views: 242.9ms | ActiveRecord: 3.3ms)
+
+
+Started POST "/groups/14/messages" for 127.0.0.1 at 2018-05-26 20:45:22 +0900
+Processing by MessagesController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tP79IC0z7yJlpb1bp4pHnGSsjlGW+lh5ZlyzUpJchfTgAN2jvaTxrwqANzy/+ubo7iUfd9juG8iaGTM8lJTUgw==", "message"=>{"content"=>"a"}, "group_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (11.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (14.1ms)[0m  [1m[32mINSERT INTO `messages` (`content`, `group_id`, `user_id`, `created_at`, `updated_at`) VALUES ('a', 14, 5, '2018-05-26 11:45:22', '2018-05-26 11:45:22')[0m
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.json.jbuilder
+  Rendered messages/create.json.jbuilder (1.5ms)
+Completed 200 OK in 113ms (Views: 54.0ms | ActiveRecord: 32.9ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:45:22 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (2.2ms)
+Completed 200 OK in 35ms (Views: 25.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/groups/14/messages?id=14" for 127.0.0.1 at 2018-05-26 20:45:23 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"14", "group_id"=>"14"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (3.4ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '14')[0m
+  Rendered messages/index.json.jbuilder (5.4ms)
+Completed 200 OK in 43ms (Views: 29.7ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:45:24 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (8.1ms)
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (30.0ms)
+  Rendered groups/index.html.haml within layouts/application (103.8ms)
+  Rendered layouts/_notifications.html.haml (3.5ms)
+Completed 200 OK in 284ms (Views: 231.8ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/groups/14/messages" for 127.0.0.1 at 2018-05-26 20:45:26 +0900
+Processing by MessagesController#index as HTML
+  Parameters: {"group_id"=>"14"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (3.1ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (8.6ms)
+  [1m[36mGroup Load (0.9ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (22.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` INNER JOIN `group_users` ON `users`.`id` = `group_users`.`user_id` WHERE `group_users`.`group_id` = 14[0m
+  Rendered shared/_chatMain__top.html.haml (11.2ms)
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT `users`.* FROM `users` WHERE `users`.`id` = 5[0m
+  Rendered collection of messages/_message.html.haml [6 times] (43.9ms)
+  Rendered shared/_chatMain__bottom.html.haml (34.9ms)
+  Rendered messages/index.html.haml within layouts/application (195.4ms)
+  Rendered layouts/_notifications.html.haml (2.3ms)
+Completed 200 OK in 401ms (Views: 382.3ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:45:28 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (1.1ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (3.2ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (6.9ms)
+Completed 200 OK in 64ms (Views: 48.4ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:45:29 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (8.2ms)
+  [1m[36mGroup Load (1.9ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (19.1ms)
+  Rendered groups/index.html.haml within layouts/application (109.7ms)
+  Rendered layouts/_notifications.html.haml (3.5ms)
+Completed 200 OK in 273ms (Views: 234.6ms | ActiveRecord: 5.8ms)
+
+
+Started POST "/groups/14/messages" for 127.0.0.1 at 2018-05-26 20:45:31 +0900
+Processing by MessagesController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MFHyQkk6beHs8jv364FSMoxUBt/mjoDdFOhGte0a+FBkr9LB2a1zbIPXsZDz8fNGBt2X+aiaw2zorcbb69KpJw==", "message"=>{"content"=>"trrtt"}, "group_id"=>"14"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 LIMIT 1[0m
+  [1m[35mSQL (13.1ms)[0m  [1m[32mINSERT INTO `messages` (`content`, `group_id`, `user_id`, `created_at`, `updated_at`) VALUES ('trrtt', 14, 5, '2018-05-26 11:45:31', '2018-05-26 11:45:31')[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.json.jbuilder
+  Rendered messages/create.json.jbuilder (0.8ms)
+Completed 200 OK in 50ms (Views: 20.5ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:45:32 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (1.9ms)
+Completed 200 OK in 42ms (Views: 33.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:45:33 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (2.8ms)
+Completed 200 OK in 35ms (Views: 26.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:45:34 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (5.5ms)
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (106.8ms)
+  Rendered groups/index.html.haml within layouts/application (185.3ms)
+  Rendered layouts/_notifications.html.haml (3.2ms)
+Completed 200 OK in 332ms (Views: 293.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:45:37 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (61.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (8.8ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (28.6ms)
+Completed 200 OK in 296ms (Views: 209.1ms | ActiveRecord: 70.8ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:45:38 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (8.3ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (1.1ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (3.4ms)
+Completed 200 OK in 83ms (Views: 42.5ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:45:39 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (23.1ms)
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (48.7ms)
+  Rendered groups/index.html.haml within layouts/application (174.0ms)
+  Rendered layouts/_notifications.html.haml (9.8ms)
+Completed 200 OK in 576ms (Views: 505.4ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:45:42 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (2.6ms)
+Completed 200 OK in 50ms (Views: 34.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:45:43 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (13.2ms)
+Completed 200 OK in 50ms (Views: 37.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:45:44 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (11.9ms)
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (1.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (34.4ms)
+  Rendered groups/index.html.haml within layouts/application (117.7ms)
+  Rendered layouts/_notifications.html.haml (3.7ms)
+Completed 200 OK in 281ms (Views: 246.9ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:45:47 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (1.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (4.5ms)
+Completed 200 OK in 38ms (Views: 27.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:45:48 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (1.3ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (3.5ms)
+Completed 200 OK in 47ms (Views: 35.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:45:49 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (8.4ms)
+  [1m[36mGroup Load (1.1ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (1.3ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (26.1ms)
+  Rendered groups/index.html.haml within layouts/application (126.1ms)
+  Rendered layouts/_notifications.html.haml (12.4ms)
+Completed 200 OK in 350ms (Views: 297.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:45:52 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (5.8ms)
+Completed 200 OK in 100ms (Views: 60.6ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:45:53 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (21.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (13.2ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (26.6ms)
+Completed 200 OK in 112ms (Views: 48.8ms | ActiveRecord: 35.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:45:54 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (11.0ms)
+  [1m[36mGroup Load (1.4ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (28.3ms)
+  Rendered groups/index.html.haml within layouts/application (123.3ms)
+  Rendered layouts/_notifications.html.haml (3.5ms)
+Completed 200 OK in 292ms (Views: 255.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:45:58 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (7.5ms)
+Completed 200 OK in 177ms (Views: 56.0ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:45:58 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (5.0ms)
+Completed 200 OK in 53ms (Views: 38.5ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:45:59 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (15.3ms)
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (5.1ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (46.1ms)
+  Rendered groups/index.html.haml within layouts/application (241.2ms)
+  Rendered layouts/_notifications.html.haml (17.6ms)
+Completed 200 OK in 581ms (Views: 484.5ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:46:04 +0900
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:46:04 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:46:04 +0900
+  [1m[36mUser Load (895.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mUser Load (892.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (4.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  [1m[36mGroup Load (36.0ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (32.0ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  [1m[36mMessage Load (2.2ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (176.9ms)
+  Rendered messages/index.json.jbuilder (9.1ms)
+Completed 200 OK in 1356ms (Views: 261.2ms | ActiveRecord: 930.3ms)
+
+
+Completed 200 OK in 1405ms (Views: 348.7ms | ActiveRecord: 931.9ms)
+
+
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (12.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (60.6ms)
+  [1m[36mGroup Load (21.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (106.6ms)
+  Rendered groups/index.html.haml within layouts/application (573.2ms)
+  Rendered layouts/_notifications.html.haml (63.0ms)
+Completed 200 OK in 1215ms (Views: 1092.9ms | ActiveRecord: 36.7ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:46:08 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (4.7ms)
+Completed 200 OK in 73ms (Views: 51.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:46:08 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (1.1ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (68.6ms)
+Completed 200 OK in 141ms (Views: 126.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:46:09 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (27.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (51.7ms)
+  [1m[36mGroup Load (2.4ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (60.0ms)
+  Rendered groups/index.html.haml within layouts/application (286.0ms)
+  Rendered layouts/_notifications.html.haml (8.3ms)
+Completed 200 OK in 697ms (Views: 590.4ms | ActiveRecord: 32.2ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:46:13 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (3.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (1.3ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (5.8ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (23.2ms)
+Completed 200 OK in 259ms (Views: 185.3ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:46:13 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (1.1ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (10.8ms)
+Completed 200 OK in 79ms (Views: 58.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:46:14 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (30.3ms)
+  [1m[36mGroup Load (1.2ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (43.1ms)
+  Rendered groups/index.html.haml within layouts/application (277.8ms)
+  Rendered layouts/_notifications.html.haml (10.7ms)
+Completed 200 OK in 545ms (Views: 491.1ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:46:17 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (37.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (81.2ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (5.3ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (11.5ms)
+Completed 200 OK in 411ms (Views: 178.9ms | ActiveRecord: 123.8ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:46:18 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (3.9ms)
+Completed 200 OK in 52ms (Views: 38.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:46:19 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (58.4ms)
+  [1m[36mGroup Load (11.9ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (4.3ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (2.9ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (202.9ms)
+  Rendered groups/index.html.haml within layouts/application (753.4ms)
+  Rendered layouts/_notifications.html.haml (394.6ms)
+Completed 200 OK in 2004ms (Views: 1896.2ms | ActiveRecord: 21.2ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:46:22 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (11.0ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (2.9ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (4.9ms)
+Completed 200 OK in 75ms (Views: 46.7ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:46:23 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (43.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (206.9ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (61.1ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (86.8ms)
+Completed 200 OK in 522ms (Views: 145.8ms | ActiveRecord: 311.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:46:24 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (13.9ms)
+  [1m[36mGroup Load (2.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (1.1ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (3.1ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (5.0ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (88.8ms)
+  Rendered groups/index.html.haml within layouts/application (360.4ms)
+  Rendered layouts/_notifications.html.haml (7.7ms)
+Completed 200 OK in 1075ms (Views: 1000.7ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:46:27 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (3.1ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (10.4ms)
+Completed 200 OK in 80ms (Views: 48.9ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:46:28 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (45.2ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (1.8ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (6.4ms)
+Completed 200 OK in 209ms (Views: 138.6ms | ActiveRecord: 47.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:46:29 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (25.5ms)
+  [1m[36mGroup Load (0.9ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (3.0ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (50.4ms)
+  Rendered groups/index.html.haml within layouts/application (352.2ms)
+  Rendered layouts/_notifications.html.haml (9.0ms)
+Completed 200 OK in 665ms (Views: 601.6ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:46:32 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (2.5ms)
+Completed 200 OK in 60ms (Views: 43.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:46:33 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (3.4ms)
+Completed 200 OK in 49ms (Views: 36.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:46:34 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (24.0ms)
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (68.8ms)
+  Rendered groups/index.html.haml within layouts/application (179.3ms)
+  Rendered layouts/_notifications.html.haml (11.6ms)
+Completed 200 OK in 473ms (Views: 434.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:46:38 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (3.6ms)
+Completed 200 OK in 47ms (Views: 36.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:46:38 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (3.2ms)
+Completed 200 OK in 42ms (Views: 32.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:46:39 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (17.3ms)
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (2.3ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (41.7ms)
+  Rendered groups/index.html.haml within layouts/application (151.6ms)
+  Rendered layouts/_notifications.html.haml (16.9ms)
+Completed 200 OK in 685ms (Views: 641.0ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:46:42 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (1.3ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (3.2ms)
+Completed 200 OK in 71ms (Views: 56.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:46:43 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (2.8ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (1.3ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (5.9ms)
+Completed 200 OK in 66ms (Views: 44.8ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:46:44 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (34.3ms)
+  [1m[36mGroup Load (2.2ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (33.7ms)
+  Rendered groups/index.html.haml within layouts/application (233.4ms)
+  Rendered layouts/_notifications.html.haml (6.2ms)
+Completed 200 OK in 447ms (Views: 395.7ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:46:47 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (3.7ms)
+Completed 200 OK in 43ms (Views: 31.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:46:48 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (8.5ms)
+Completed 200 OK in 47ms (Views: 35.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:46:51 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (14.6ms)
+  [1m[36mGroup Load (1.4ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (3.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (1.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (57.7ms)
+  Rendered groups/index.html.haml within layouts/application (227.3ms)
+  Rendered layouts/_notifications.html.haml (8.1ms)
+Completed 200 OK in 700ms (Views: 572.4ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:46:52 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (63.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (7.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (12.9ms)
+Completed 200 OK in 333ms (Views: 80.8ms | ActiveRecord: 71.7ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:46:53 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (8.7ms)
+Completed 200 OK in 100ms (Views: 81.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:46:54 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (22.2ms)
+  [1m[36mGroup Load (5.0ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (1.9ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (1.3ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (200.0ms)
+  Rendered groups/index.html.haml within layouts/application (371.6ms)
+  Rendered layouts/_notifications.html.haml (11.9ms)
+Completed 200 OK in 881ms (Views: 806.5ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:46:57 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (4.0ms)
+Completed 200 OK in 65ms (Views: 47.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:46:58 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (1.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (6.8ms)
+Completed 200 OK in 84ms (Views: 57.3ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:46:59 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (25.1ms)
+  [1m[36mGroup Load (1.2ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (37.7ms)
+  Rendered groups/index.html.haml within layouts/application (203.4ms)
+  Rendered layouts/_notifications.html.haml (3.1ms)
+Completed 200 OK in 396ms (Views: 336.9ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:47:02 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (5.1ms)
+Completed 200 OK in 36ms (Views: 25.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:47:03 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (2.1ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (4.0ms)
+Completed 200 OK in 46ms (Views: 31.7ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:47:05 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (74.3ms)
+  [1m[36mGroup Load (2.2ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (1.8ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (12.3ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (124.6ms)
+  Rendered groups/index.html.haml within layouts/application (429.8ms)
+  Rendered layouts/_notifications.html.haml (3.6ms)
+Completed 200 OK in 1058ms (Views: 936.7ms | ActiveRecord: 19.2ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:47:07 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (17.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (30.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (6.1ms)
+Completed 200 OK in 128ms (Views: 54.7ms | ActiveRecord: 49.2ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:47:09 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (3.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (5.9ms)
+Completed 200 OK in 57ms (Views: 39.9ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:47:09 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (11.6ms)
+  [1m[36mGroup Load (2.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (1.8ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (2.2ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (1221.5ms)
+  Rendered groups/index.html.haml within layouts/application (1297.2ms)
+  Rendered layouts/_notifications.html.haml (11.1ms)
+Completed 200 OK in 1593ms (Views: 1554.2ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:47:13 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (8.4ms)
+Completed 200 OK in 50ms (Views: 36.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:47:13 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (1.6ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (2.6ms)
+Completed 200 OK in 106ms (Views: 36.2ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:47:14 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (16.6ms)
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (1.1ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (27.4ms)
+  Rendered groups/index.html.haml within layouts/application (133.8ms)
+  Rendered layouts/_notifications.html.haml (9.1ms)
+Completed 200 OK in 316ms (Views: 279.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:47:17 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (1.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (2.2ms)
+Completed 200 OK in 44ms (Views: 26.8ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:47:18 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (3.2ms)
+Completed 200 OK in 42ms (Views: 29.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:47:19 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (11.1ms)
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (1.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (21.9ms)
+  Rendered groups/index.html.haml within layouts/application (99.2ms)
+  Rendered layouts/_notifications.html.haml (8.5ms)
+Completed 200 OK in 324ms (Views: 266.2ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:47:22 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (3.2ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (2.4ms)
+Completed 200 OK in 57ms (Views: 35.2ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:47:23 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (7.1ms)
+Completed 200 OK in 38ms (Views: 27.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:47:24 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (15.0ms)
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (41.4ms)
+  Rendered groups/index.html.haml within layouts/application (112.3ms)
+  Rendered layouts/_notifications.html.haml (3.9ms)
+Completed 200 OK in 332ms (Views: 276.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:47:27 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (4.8ms)
+Completed 200 OK in 48ms (Views: 35.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:47:28 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (3.6ms)
+Completed 200 OK in 37ms (Views: 23.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:47:29 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (22.8ms)
+  [1m[36mGroup Load (1.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (21.7ms)
+  Rendered groups/index.html.haml within layouts/application (122.2ms)
+  Rendered layouts/_notifications.html.haml (5.6ms)
+Completed 200 OK in 300ms (Views: 245.4ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:47:32 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (2.6ms)
+Completed 200 OK in 42ms (Views: 31.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:47:33 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (2.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (12.6ms)
+Completed 200 OK in 41ms (Views: 30.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:47:34 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (17.4ms)
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (22.5ms)
+  Rendered groups/index.html.haml within layouts/application (121.0ms)
+  Rendered layouts/_notifications.html.haml (4.2ms)
+Completed 200 OK in 274ms (Views: 245.6ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:47:37 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (7.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (3.7ms)
+Completed 200 OK in 66ms (Views: 38.2ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:47:38 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (1.3ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (3.8ms)
+Completed 200 OK in 37ms (Views: 26.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:47:39 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (10.0ms)
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (3.3ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (1.1ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (41.9ms)
+  Rendered groups/index.html.haml within layouts/application (113.0ms)
+  Rendered layouts/_notifications.html.haml (3.1ms)
+Completed 200 OK in 311ms (Views: 258.4ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:47:42 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (2.5ms)
+Completed 200 OK in 37ms (Views: 25.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:47:43 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (2.7ms)
+Completed 200 OK in 33ms (Views: 22.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:47:44 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (16.3ms)
+  [1m[36mGroup Load (1.1ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (38.1ms)
+  Rendered groups/index.html.haml within layouts/application (125.2ms)
+  Rendered layouts/_notifications.html.haml (14.1ms)
+Completed 200 OK in 316ms (Views: 286.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:47:47 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (7.2ms)
+Completed 200 OK in 40ms (Views: 27.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:47:48 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (4.1ms)
+Completed 200 OK in 38ms (Views: 26.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:47:49 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (11.0ms)
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (1.1ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (23.1ms)
+  Rendered groups/index.html.haml within layouts/application (124.4ms)
+  Rendered layouts/_notifications.html.haml (4.0ms)
+Completed 200 OK in 286ms (Views: 253.3ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:47:52 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (2.2ms)
+Completed 200 OK in 29ms (Views: 21.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:47:53 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (2.1ms)
+Completed 200 OK in 27ms (Views: 18.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:47:54 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (7.8ms)
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (1.3ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (23.9ms)
+  Rendered groups/index.html.haml within layouts/application (118.9ms)
+  Rendered layouts/_notifications.html.haml (5.3ms)
+Completed 200 OK in 370ms (Views: 338.1ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:47:58 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (8.3ms)
+Completed 200 OK in 61ms (Views: 35.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:47:58 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (1.2ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (3.3ms)
+Completed 200 OK in 38ms (Views: 25.9ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:47:59 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (8.6ms)
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (19.1ms)
+  Rendered groups/index.html.haml within layouts/application (92.2ms)
+  Rendered layouts/_notifications.html.haml (5.6ms)
+Completed 200 OK in 240ms (Views: 209.9ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:48:02 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (2.0ms)
+Completed 200 OK in 30ms (Views: 19.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:48:03 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (2.4ms)
+Completed 200 OK in 31ms (Views: 20.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:48:04 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (10.0ms)
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (19.5ms)
+  Rendered groups/index.html.haml within layouts/application (89.5ms)
+  Rendered layouts/_notifications.html.haml (4.7ms)
+Completed 200 OK in 228ms (Views: 199.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:48:07 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (2.2ms)
+Completed 200 OK in 30ms (Views: 20.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:48:09 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (4.6ms)
+Completed 200 OK in 30ms (Views: 21.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:48:11 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (13.2ms)
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (20.2ms)
+  Rendered groups/index.html.haml within layouts/application (115.9ms)
+  Rendered layouts/_notifications.html.haml (4.7ms)
+Completed 200 OK in 285ms (Views: 253.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:48:13 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (7.7ms)
+Completed 200 OK in 40ms (Views: 30.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:48:13 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (3.8ms)
+Completed 200 OK in 39ms (Views: 28.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:48:14 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (9.3ms)
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (27.2ms)
+  Rendered groups/index.html.haml within layouts/application (116.0ms)
+  Rendered layouts/_notifications.html.haml (5.1ms)
+Completed 200 OK in 291ms (Views: 253.4ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:48:18 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (2.8ms)
+Completed 200 OK in 32ms (Views: 22.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:48:18 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (2.5ms)
+Completed 200 OK in 32ms (Views: 21.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:48:19 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (6.5ms)
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (21.6ms)
+  Rendered groups/index.html.haml within layouts/application (92.2ms)
+  Rendered layouts/_notifications.html.haml (4.4ms)
+Completed 200 OK in 248ms (Views: 218.7ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:48:22 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (3.1ms)
+Completed 200 OK in 60ms (Views: 48.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:48:23 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (2.4ms)
+Completed 200 OK in 42ms (Views: 31.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:48:24 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (7.4ms)
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (35.3ms)
+  Rendered groups/index.html.haml within layouts/application (136.9ms)
+  Rendered layouts/_notifications.html.haml (4.6ms)
+Completed 200 OK in 360ms (Views: 293.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:48:28 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (2.0ms)
+Completed 200 OK in 30ms (Views: 19.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:48:28 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (2.4ms)
+Completed 200 OK in 29ms (Views: 20.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:48:29 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (20.7ms)
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (24.8ms)
+  Rendered groups/index.html.haml within layouts/application (109.9ms)
+  Rendered layouts/_notifications.html.haml (3.3ms)
+Completed 200 OK in 278ms (Views: 226.5ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:48:33 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (8.4ms)
+Completed 200 OK in 37ms (Views: 26.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:48:34 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (2.8ms)
+Completed 200 OK in 33ms (Views: 19.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:48:35 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (11.1ms)
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (20.5ms)
+  Rendered groups/index.html.haml within layouts/application (296.3ms)
+  Rendered layouts/_notifications.html.haml (9.6ms)
+Completed 200 OK in 588ms (Views: 549.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:48:37 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (4.2ms)
+Completed 200 OK in 47ms (Views: 35.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:48:38 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (3.8ms)
+Completed 200 OK in 30ms (Views: 22.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:48:39 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (4.5ms)
+  [1m[36mGroup Load (1.2ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (20.6ms)
+  Rendered groups/index.html.haml within layouts/application (93.2ms)
+  Rendered layouts/_notifications.html.haml (5.9ms)
+Completed 200 OK in 314ms (Views: 286.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:48:42 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (2.0ms)
+Completed 200 OK in 30ms (Views: 21.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:48:43 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (4.0ms)
+Completed 200 OK in 29ms (Views: 20.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:48:44 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (6.7ms)
+  [1m[36mGroup Load (2.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (22.3ms)
+  Rendered groups/index.html.haml within layouts/application (95.0ms)
+  Rendered layouts/_notifications.html.haml (4.4ms)
+Completed 200 OK in 238ms (Views: 204.7ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:48:47 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (4.8ms)
+Completed 200 OK in 33ms (Views: 22.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:48:48 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (6.7ms)
+Completed 200 OK in 37ms (Views: 28.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:48:49 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (5.2ms)
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (11.9ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (36.9ms)
+  Rendered groups/index.html.haml within layouts/application (100.5ms)
+  Rendered layouts/_notifications.html.haml (3.4ms)
+Completed 200 OK in 238ms (Views: 196.2ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:48:53 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (2.6ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (7.0ms)
+Completed 200 OK in 107ms (Views: 37.7ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:48:53 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (2.5ms)
+Completed 200 OK in 35ms (Views: 23.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:48:54 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (15.2ms)
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (28.2ms)
+  Rendered groups/index.html.haml within layouts/application (115.7ms)
+  Rendered layouts/_notifications.html.haml (7.0ms)
+Completed 200 OK in 286ms (Views: 236.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:48:57 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (1.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (6.2ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (10.4ms)
+Completed 200 OK in 54ms (Views: 30.8ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:48:58 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (3.8ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (5.8ms)
+Completed 200 OK in 66ms (Views: 40.9ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:48:59 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (13.3ms)
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (24.0ms)
+  Rendered groups/index.html.haml within layouts/application (108.8ms)
+  Rendered layouts/_notifications.html.haml (5.3ms)
+Completed 200 OK in 295ms (Views: 262.1ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:49:02 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (10.1ms)
+Completed 200 OK in 38ms (Views: 28.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:49:03 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (5.1ms)
+Completed 200 OK in 36ms (Views: 24.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:49:04 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (16.7ms)
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (1.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (45.9ms)
+  Rendered groups/index.html.haml within layouts/application (143.9ms)
+  Rendered layouts/_notifications.html.haml (3.7ms)
+Completed 200 OK in 327ms (Views: 284.5ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:49:07 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (2.2ms)
+Completed 200 OK in 31ms (Views: 21.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:49:08 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (2.3ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (5.2ms)
+Completed 200 OK in 61ms (Views: 37.6ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:49:09 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (13.7ms)
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (22.1ms)
+  Rendered groups/index.html.haml within layouts/application (111.4ms)
+  Rendered layouts/_notifications.html.haml (3.3ms)
+Completed 200 OK in 279ms (Views: 245.5ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:49:12 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (11.2ms)
+Completed 200 OK in 47ms (Views: 35.7ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:49:13 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (13.6ms)
+Completed 200 OK in 45ms (Views: 34.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:49:14 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (20.1ms)
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (29.2ms)
+  Rendered groups/index.html.haml within layouts/application (114.5ms)
+  Rendered layouts/_notifications.html.haml (10.9ms)
+Completed 200 OK in 282ms (Views: 244.9ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:49:18 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (4.4ms)
+Completed 200 OK in 41ms (Views: 23.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:49:18 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (6.0ms)
+Completed 200 OK in 36ms (Views: 25.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:49:19 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (7.4ms)
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (19.3ms)
+  Rendered groups/index.html.haml within layouts/application (89.2ms)
+  Rendered layouts/_notifications.html.haml (4.9ms)
+Completed 200 OK in 254ms (Views: 217.7ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:49:23 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (5.1ms)
+Completed 200 OK in 35ms (Views: 24.3ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:49:23 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (2.7ms)
+Completed 200 OK in 32ms (Views: 19.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:49:24 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (35.5ms)
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (49.4ms)
+  Rendered groups/index.html.haml within layouts/application (178.8ms)
+  Rendered layouts/_notifications.html.haml (4.4ms)
+Completed 200 OK in 453ms (Views: 415.2ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:49:28 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (6.1ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (2.3ms)
+Completed 200 OK in 58ms (Views: 34.1ms | ActiveRecord: 7.3ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:49:28 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (4.6ms)
+Completed 200 OK in 31ms (Views: 21.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:49:29 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (7.1ms)
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (21.2ms)
+  Rendered groups/index.html.haml within layouts/application (94.8ms)
+  Rendered layouts/_notifications.html.haml (5.4ms)
+Completed 200 OK in 256ms (Views: 227.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:49:32 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (2.1ms)
+Completed 200 OK in 30ms (Views: 20.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:49:33 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (13.8ms)
+Completed 200 OK in 41ms (Views: 30.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:49:34 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (9.0ms)
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (8.0ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (26.6ms)
+  Rendered groups/index.html.haml within layouts/application (102.6ms)
+  Rendered layouts/_notifications.html.haml (3.7ms)
+Completed 200 OK in 250ms (Views: 213.4ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:49:37 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (2.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (11.4ms)
+Completed 200 OK in 67ms (Views: 46.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:49:38 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (2.9ms)
+Completed 200 OK in 35ms (Views: 24.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:49:39 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (6.9ms)
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (30.5ms)
+  Rendered groups/index.html.haml within layouts/application (110.9ms)
+  Rendered layouts/_notifications.html.haml (4.9ms)
+Completed 200 OK in 279ms (Views: 245.4ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:49:44 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (4.9ms)
+Completed 200 OK in 56ms (Views: 34.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:49:46 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (1.8ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:49:46 +0900
+  Rendered messages/index.json.jbuilder (14.3ms)
+Completed 200 OK in 48ms (Views: 36.6ms | ActiveRecord: 3.0ms)
+
+
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (11.5ms)
+  [1m[36mGroup Load (1.1ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (39.0ms)
+  Rendered groups/index.html.haml within layouts/application (165.5ms)
+  Rendered layouts/_notifications.html.haml (8.2ms)
+Completed 200 OK in 707ms (Views: 669.2ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:49:47 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (2.7ms)
+Completed 200 OK in 32ms (Views: 22.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:49:48 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (2.1ms)
+Completed 200 OK in 30ms (Views: 19.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:49:49 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (12.9ms)
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (1.0ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (24.8ms)
+  Rendered groups/index.html.haml within layouts/application (103.0ms)
+  Rendered layouts/_notifications.html.haml (6.9ms)
+Completed 200 OK in 280ms (Views: 244.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:49:52 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (2.3ms)
+Completed 200 OK in 69ms (Views: 53.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:49:53 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (2.8ms)
+Completed 200 OK in 30ms (Views: 20.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:49:54 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (27.2ms)
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (28.4ms)
+  Rendered groups/index.html.haml within layouts/application (142.0ms)
+  Rendered layouts/_notifications.html.haml (5.9ms)
+Completed 200 OK in 357ms (Views: 308.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:49:57 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (4.1ms)
+Completed 200 OK in 48ms (Views: 36.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:49:58 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (5.8ms)
+Completed 200 OK in 33ms (Views: 23.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:49:59 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (9.5ms)
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.7ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (23.3ms)
+  Rendered groups/index.html.haml within layouts/application (98.0ms)
+  Rendered layouts/_notifications.html.haml (4.9ms)
+Completed 200 OK in 264ms (Views: 229.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:50:03 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (4.2ms)
+Completed 200 OK in 37ms (Views: 27.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:50:03 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.3ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (2.4ms)
+Completed 200 OK in 32ms (Views: 22.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:50:04 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (16.5ms)
+  [1m[36mGroup Load (1.0ms)[0m  [1m[34mSELECT `groups`.* FROM `groups` INNER JOIN `group_users` ON `groups`.`id` = `group_users`.`group_id` WHERE `group_users`.`user_id` = 5[0m
+  [1m[36mMessage Load (2.0ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 13 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.8ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  `messages`.* FROM `messages` WHERE `messages`.`group_id` = 15 ORDER BY `messages`.`id` DESC LIMIT 1[0m
+  Rendered shared/_chatSide__bottom.html.haml (32.4ms)
+  Rendered groups/index.html.haml within layouts/application (120.8ms)
+  Rendered layouts/_notifications.html.haml (10.8ms)
+Completed 200 OK in 409ms (Views: 374.0ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/groups/1/messages?message%5Bid%5D=94" for 127.0.0.1 at 2018-05-26 20:50:07 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"message"=>{"id"=>"94"}, "group_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 1 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.9ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 1 AND (id > NULL)[0m
+  Rendered messages/index.json.jbuilder (6.2ms)
+Completed 200 OK in 35ms (Views: 24.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/groups/14/messages?id=15" for 127.0.0.1 at 2018-05-26 20:50:08 +0900
+Processing by MessagesController#index as JSON
+  Parameters: {"id"=>"15", "group_id"=>"14"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT  `groups`.* FROM `groups` WHERE `groups`.`id` = 14 LIMIT 1[0m
+  Rendering messages/index.json.jbuilder
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT `messages`.* FROM `messages` WHERE `messages`.`group_id` = 14 AND (id > '15')[0m
+  Rendered messages/index.json.jbuilder (4.8ms)
+Completed 200 OK in 34ms (Views: 23.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-05-26 20:50:09 +0900
+Processing by GroupsController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 5 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering groups/index.html.haml within layouts/application
+  Rendered shared/_chatSide__top.html.haml (64.4ms)

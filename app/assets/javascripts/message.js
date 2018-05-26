@@ -86,7 +86,7 @@ $(document).on('turbolinks:load', function() {
           data: {id: message_id},
           dataType: 'json'
         })
-        .always(function(data){
+        .done(function(data){
           if (data.length !== 0){
           data.forEach(function(data){
             buildMESSAGE(data);
