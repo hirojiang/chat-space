@@ -2,3 +2,5 @@ tmp/cache/
 public/
 *.log
 *.pid
+
+config/secrets.yml
