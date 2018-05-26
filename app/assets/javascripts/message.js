@@ -87,10 +87,12 @@ $(document).on('turbolinks:load', function() {
           dataType: 'json'
         })
         .always(function(data){
+          if (data.length !== 0){
           data.forEach(function(data){
             buildMESSAGE(data);
           });
           $('.chatMain__middle').animate({scrollTop: $('.messages')[0].scrollHeight});
+        }
         })
       }
     }
